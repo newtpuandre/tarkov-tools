@@ -67,7 +67,7 @@ const Menu = () => {
             />
             <ul className={`menu${isOpen ? ' open' : ''}`}>
                 <li className="only-large">
-                    <PatreonButton
+                    {/*<PatreonButton
                         wrapperStyle={{
                             margin: 0,
                         }}
@@ -83,7 +83,7 @@ const Menu = () => {
                             size={1}
                             className="icon-with-text"
                         />
-                    </PatreonButton>
+                    </PatreonButton>*/}
                 </li>
                 <li className="submenu-wrapper">
                     <Link to="/" onClick={setIsOpen.bind(this, false)}>
@@ -110,6 +110,7 @@ const Menu = () => {
                     <ul>
                         {mapData.map((map) => (
                             <MenuItem
+                            style={{"paddingRight":"10%"}}
                                 displayText={map.displayText}
                                 key={map.key}
                                 to={`/map/${map.key}`}
@@ -118,96 +119,7 @@ const Menu = () => {
                         ))}
                     </ul>
                 </li>
-                <li className="submenu-wrapper">
-                    <Link to="/items/">{t('Items')}</Link>
-                    <ul>
-                        {itemsData.map((categoryPage) => (
-                            <MenuItem
-                                displayText={categoryPage.displayText}
-                                key={categoryPage.key}
-                                to={`/items/${categoryPage.key}`}
-                                onClick={setIsOpen.bind(this, false)}
-                            />
-                        ))}
-                    </ul>
-                </li>
-                <li className="submenu-wrapper">
-                    <Link to="/traders">{t('Traders')}</Link>
-                    <ul>
-                        <MenuItem
-                            displayText={t('Prapor')}
-                            to={`/traders/prapor`}
-                            onClick={setIsOpen.bind(this, false)}
-                        />
-                        <MenuItem
-                            displayText={t('Therapist')}
-                            to={`/traders/therapist`}
-                            onClick={setIsOpen.bind(this, false)}
-                        />
-                        <MenuItem
-                            displayText={t('Skier')}
-                            to={`/traders/skier`}
-                            onClick={setIsOpen.bind(this, false)}
-                        />
-                        <MenuItem
-                            displayText={t('Peacekeeper')}
-                            to={`/traders/peacekeeper`}
-                            onClick={setIsOpen.bind(this, false)}
-                        />
-                        <MenuItem
-                            displayText={t('Mechanic')}
-                            to={`/traders/mechanic`}
-                            onClick={setIsOpen.bind(this, false)}
-                        />
-                        <MenuItem
-                            displayText={t('Ragman')}
-                            to={`/traders/ragman`}
-                            onClick={setIsOpen.bind(this, false)}
-                        />
-                        <MenuItem
-                            displayText={t('Jaeger')}
-                            to={`/traders/jaeger`}
-                            onClick={setIsOpen.bind(this, false)}
-                        />
-                    </ul>
-                </li>
-                <li className="submenu-wrapper">
-                    <Link
-                        to="/loot-tier/"
-                        onClick={setIsOpen.bind(this, false)}
-                    >
-                        {t('Loot tiers')}
-                    </Link>
-                </li>
-
-                <li className="submenu-wrapper">
-                    <Link to="/barters/" onClick={setIsOpen.bind(this, false)}>
-                        {t('Barter profit')}
-                    </Link>
-                </li>
-                <li className="submenu-wrapper">
-                    <Link
-                        to="/hideout-profit/"
-                        onClick={setIsOpen.bind(this, false)}
-                    >
-                        {t('Hideout profit')}
-                    </Link>
-                </li>
-                <li className="submenu-wrapper desktop-only-link">
-                    <Link
-                        aria-label="Remote control"
-                        to="/control/"
-                        onClick={setIsOpen.bind(this, false)}
-                    >
-                        <Icon
-                            path={mdiRemote}
-                            // size={1}
-                            className="icon-with-text"
-                            size={'20px'}
-                        />
-                    </Link>
-                </li>
-                <li className="submenu-wrapper desktop-only-link">
+                <li className="submenu-wrapper desktop-only-link" style={{"paddingRight":"20px"}}>
                     <Link
                         aria-label="Settings"
                         to="/settings/"

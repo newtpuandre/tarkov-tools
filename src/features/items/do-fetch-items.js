@@ -62,6 +62,7 @@ const QueryBody = JSON.stringify({
 });
 
 const doFetchItems = async (...a) => {
+    /*
     const [itemData, itemGrids, itemProps] = await Promise.all([
         fetch('https://tarkov-tools.com/graphql', {
             method: 'POST',
@@ -264,9 +265,11 @@ const doFetchItems = async (...a) => {
 
         item.traderPrice = bestTraderPrice?.price || 0;
         item.traderName = bestTraderPrice?.trader || '?';
+        
     }
-
-    return allItems;
+*/
+    //return allItems;
+    return [];
 };
 
 export default doFetchItems;

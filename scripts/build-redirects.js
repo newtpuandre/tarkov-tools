@@ -1,4 +1,4 @@
-const fs = require('fs');
+/*const fs = require('fs');
 const path = require('path');
 
 const got = require('got');
@@ -25,3 +25,4 @@ const got = require('got');
     fs.writeFileSync(path.join(__dirname, '..', 'workers-site', 'index.js'), indexTemplate);
     console.timeEnd('Write new data');
 })()
+*/

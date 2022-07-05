@@ -25,25 +25,12 @@ function Footer() {
                     </a>
                 </p>
                 <p>
-                    {t(
-                        'If you wanna have a chat, ask questions or request features, we have a',
-                    )}{' '}
-                    <a href="https://discord.gg/B2xM8WZyVv">
-                        <DiscordIcon /> {t('Discord server')}
-                    </a>
-                </p>
-                <p>
                     <Link to="/about">{t('About tarkov-tools')}</Link>
                 </p>
                 <h3>{t('External resources')}</h3>
                 <p>
                     <a href="https://developertracker.com/escape-from-tarkov/">
                         Escape from Tarkov Dev tracker
-                    </a>
-                </p>
-                <p>
-                    <a href="https://tarkovbitcoinprice.com/">
-                        Tarkov Bitcoin Price
                     </a>
                 </p>
                 <p>
@@ -56,55 +43,12 @@ function Footer() {
                 </p>
             </div>
             <div className="footer-section-wrapper">
-                <h3>{t('Supporters')}</h3>
-                <PatreonButton />
-                {supporters.map((supporter) => {
-                    if (supporter.name === 'kokarn') {
-                        return null;
-                    }
-
-                    if (!supporter.patreon) {
-                        return null;
-                    }
-
-                    return (
-                        <Supporter
-                            key={`supporter-${supporter.name}`}
-                            name={supporter.name}
-                            github={supporter.github}
-                            patreon={supporter.patreon}
-                            link={supporter.link}
-                        />
-                    );
-                })}
+                 {/*<PatreonButton />*/}
             </div>
             <div className="footer-section-wrapper">
                 <h3>{t('Resources')}</h3>
                 <p>
-                    <Link to={'/api/'}>{t('Tarkov Tools API')}</Link>
-                </p>
-                <p>
-                    <Link to={'/nightbot/'}>{t('Nightbot integration')}</Link>
-                </p>
-                <p>
-                    <Link to={'/streamelements/'}>
-                        {t('StreamElements integration')}
-                    </Link>
-                </p>
-                <p>
-                    <Link to={'/moobot'}>{t('Moobot integration')}</Link>
-                </p>
-                <p>
                     <Link to={'/api-users/'}>{t('API Users')}</Link>
-                </p>
-                <p>
-                    <a
-                        href={
-                            'https://discord.com/api/oauth2/authorize?client_id=925298399371231242&permissions=309237664832&scope=bot%20applications.commands'
-                        }
-                    >
-                        {t('Discord bot for your Discord')}
-                    </a>
                 </p>
             </div>
             <div className="copyright-wrapper">

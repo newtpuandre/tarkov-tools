@@ -1,5 +1,5 @@
 const doFetchBarters = async () => {
-    const bodyQuery = JSON.stringify({
+    /*const bodyQuery = JSON.stringify({
         query: `{
         barters {
             rewardItems {
@@ -73,7 +73,8 @@ const doFetchBarters = async () => {
 
     const bartersData = await response.json();
 
-    return bartersData.data.barters;
+    return bartersData.data.barters;*/
+    return [];
 };
 
 export default doFetchBarters;
