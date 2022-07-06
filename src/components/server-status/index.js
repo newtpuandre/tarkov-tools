@@ -81,7 +81,6 @@ function ServerStatus() {
                     className={`status-indicator status-`}
                 />
                 <div className="server-status-message-wrapper">
-                   {'lol'}
                 </div>
             </a>
         </div>
